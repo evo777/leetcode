@@ -1,9 +1,3 @@
-/***
-
-Write a function
-
-***/
-
 const twoSum = (nums, target) => {
     let map = [];
 

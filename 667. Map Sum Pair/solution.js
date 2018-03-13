@@ -1,4 +1,4 @@
-var MapSum = function() {
+const MapSum = function() {
   this.obj = {};
 };
 

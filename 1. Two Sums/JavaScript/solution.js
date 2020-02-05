@@ -1,14 +1,13 @@
-const twoSum = (nums, target) => {
-    let map = [];
+var twoSum = function(nums, target) {
+  const hash = {};
 
-    for(let i = 0; i < nums.length; i++) {
-        let found = target - nums[i];
-        if(map[nums[i]] !== undefined) {
-            return [map[nums[i]], i]
-        } else {
-            map[found] = i;
-        }
+  for(let i = 0; i < nums.length; i++) {
+    let found = target - nums[i];
+
+    if (hash[found] !== undefined) {
+      return [hash[found], i];
+    } else {
+      hash[nums[i]] = i;
     }
-
-    return [];
+  }
 };

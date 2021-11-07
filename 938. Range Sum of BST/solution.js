@@ -1,22 +1,19 @@
-const rangeSumBST = (root, L, R) => {
-  let answer = 0;
+var rangeSumBST = function (root, low, high) {
+  let result = 0;
 
-  const dfs = (node, leftValue, rightValue) => {
-    if (node != null) {
-      if (leftValue <= node.val && node.val <= rightValue) {
-        answer += node.val;
-      }
-
-      if (leftValue < node.val) {
-        dfs(node.left, leftValue, rightValue);
-      }
-
-      if (node.val < rightValue) {
-        dfs(node.right, leftValue, rightValue);
-      }
+  const dfsHelper = (node) => {
+    if (!node) {
+      return;
     }
+
+    if (node.val >= low && node.val <= high) {
+      result += node.val;
+    }
+
+    dfsHelper(node.left);
+    dfsHelper(node.right);
   };
 
-  dfs(root, L, R);
-  return answer;
+  dfsHelper(root);
+  return result;
 };

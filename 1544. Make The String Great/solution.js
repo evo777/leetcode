@@ -1,3 +1,5 @@
+// Use stack
+
 var makeGood = function (s) {
   const stack = [];
 

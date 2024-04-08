@@ -1,4 +1,10 @@
-// Use two loops
+/*
+Use two loops:
+
+1st: create frequency table
+2nd: Iterate through the frequency table and get the minimum subarray length
+
+*/
 
 const findShortestSubArray = (nums) => {
   const freq = {};

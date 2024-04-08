@@ -1,3 +1,5 @@
+// Use two loops
+
 const findShortestSubArray = (nums) => {
   const freq = {};
   let highest = 0;
